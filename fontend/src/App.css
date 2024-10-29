@@ -1,0 +1,166 @@
+#sidebar {
+  min-width: 100%;
+  max-width: 100%;
+  background: #232f3e;
+  color: #fff;
+  transition: all 0.3s;
+  align-items: stretch;
+  z-index: 10;
+  height: 100vh;
+  overflow: auto;
+  
+}
+
+
+
+#sidebar ul.components {
+  padding: 5px 0px;
+  border-bottom: 1px solid #232f3e;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+#sidebar ul li{
+width: 100%;
+
+}
+#sidebar ul li a:hover {
+  color: #232f3e;
+  background: #fff;
+  
+}
+.nav-item.active {
+  background-color: #be2edd; 
+  color: white; /* Màu chữ cho tab đang hoạt động */
+}
+
+.active-link {
+  font-weight: bold; /* Chữ đậm cho tab đang hoạt động */
+}
+#sidebar ul li a i {
+  margin-right: 0.3rem;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded='true'] {
+  color: #fff;
+  background: #232f3e;
+}
+
+a[data-toggle='collapse'] {
+  position: relative;
+}
+
+ul ul a {
+  font-size: 1rem !important;
+  padding-left: 30px !important;
+  background: #232f3e;
+}
+
+.sidebar {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.top-sidder-containter {
+  border-bottom: 4px solid red;
+}
+
+/* Active link styling */
+.active-link {
+  background-color: #be2edd;
+  color: #fff;
+}
+
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+
+.table-container {
+  max-height: 90vh; /* Limit the height of the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+table {
+  width: 100%; /* Make sure the table takes full width */
+  border-collapse: collapse; /* Optional: Collapse borders */
+}
+
+thead {
+  position: sticky; /* Keep the header fixed when scrolling */
+  top: 0; /* Stick to the top */
+  background: white; /* Background color for the header */
+  z-index: 1; /* Ensure it is above other content */
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd; /* Border around cells */
+}
+
+.form-container {
+  background-color: #e5d2f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"], select, .selected-for-roadPrice {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-getprice {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #4d176d;
+  color: white;
+}
+
+.result-container-error {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24;           /* Dark red text */
+  padding: 10px;            /* Padding inside the container */
+  border: 1px solid #f5c6cb; /* Border similar to background */
+  border-radius: 5px;       /* Rounded corners */
+  margin-top: 10px;         /* Space from the top */
+  font-size: 16px;          /* Increase text size */
+  font-weight: bold;        /* Bold text */
+}
+
+.result-container-success {
+  background-color: #d4edda; 
+  color: #155724;          
+  padding: 10px;            
+  border: 1px solid #c3e6cb; 
+  border-radius: 5px;      
+  margin-top: 10px;        
+  font-size: 16px;          
+  font-weight: bold;        
+}
