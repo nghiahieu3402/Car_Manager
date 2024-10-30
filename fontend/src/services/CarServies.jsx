@@ -68,10 +68,24 @@ const getMaxModelPrice = () => {
 }
 
 
+const getHistoryUpdate = () => {
+
+    return (axios.get(`http://localhost:5000/getHistoryUpdatePrice`))
+
+}
+
+
+const getHistoryDelete = () => {
+
+    return (axios.get(`http://localhost:5000/getHistoryDelete`))
+
+}
+
+
 const getRoadPrice = (id, baohiem, dbo) => {
     return axios.get(`http://localhost:5000/getRoadPrice?id=${id}&baohiem=${baohiem}&duongbo=${dbo}`);
 
 
 }
 
-export { getAllXeForTable, addNewCar, getAllPhanKhuc, getAllDongCo, getAllHangXe, getRoadPrice, getAllPhienBan, deleteACar, updatePrice, getPrice, getMaxBrandsPrice, getMaxModelPrice }
+export { getAllXeForTable, addNewCar, getAllPhanKhuc, getAllDongCo, getAllHangXe, getRoadPrice, getAllPhienBan, deleteACar, updatePrice, getPrice, getMaxBrandsPrice, getMaxModelPrice, getHistoryUpdate, getHistoryDelete }

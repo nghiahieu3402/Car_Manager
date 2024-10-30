@@ -8,16 +8,17 @@ import { RouterCustom } from '../router'
 import { ToastContainer } from 'react-toastify'
 
 
+
+
+
+
 function App() {
 
   return (
 
 
 
-<BrowserRouter>
-<RouterCustom/>
-
-
+<BrowserRouter><RouterCustom/>
 <ToastContainer
         position="top-right"
         autoClose={1000}

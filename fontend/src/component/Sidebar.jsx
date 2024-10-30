@@ -62,12 +62,17 @@ const Sidebar = () => {
                     </li>
 
                     <li>
-                        <NavLink to="/Road-price" activeClassName="active-link">
+                        <NavLink to="/History-Update" activeClassName="active-link">
                         <FaHistory />
                             <span className='mx-2'>Lịch sử sửa giá</span>
                         </NavLink>
                     </li>
-                   
+                    <li>
+                        <NavLink to="/History-Delete" activeClassName="active-link">
+                        <FaHistory />
+                            <span className='mx-2'>Lịch sử xoá</span>
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>

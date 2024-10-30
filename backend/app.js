@@ -1,15 +1,15 @@
 const express = require('express');
 const oracledb = require('oracledb');
 const cors = require('cors');
-var morgan = require('morgan')
 
+var morgan = require('morgan')
 const app = express();
 app.use(cors());
 app.use(morgan('common'));
 app.use(express.json());
 
 const dbConfig = {
-  user: 'admin',
+  user: "admin",
   password: '1',
   connectString: '192.168.56.1:1521/orcl'
 };
@@ -105,7 +105,7 @@ app.get('/getPrice', async (req, res) => {
     res.json({ price: result.outBinds.result });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to execute function' });
+    res.status(500).json({ error: 'Failed' });
   } finally {
     if (connection) {
       try {
@@ -207,6 +207,30 @@ app.get('/getHangXe', async (req, res) => {
     res.status(500).json({ error: 'Failed ' });
   }
 });
+
+
+
+app.get('/getHistoryUpdatePrice', async (req, res) => {
+  try {
+    const result = await getAllData('change_price_xe');
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed' });
+  }
+});
+
+
+
+
+app.get('/getHistoryDelete', async (req, res) => {
+  try {
+    const result = await getAllData('del_xe_store');
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed' });
+  }
+});
+
 
 
 

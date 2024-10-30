@@ -1,10 +1,12 @@
 import React from 'react';
 import CarManager from "./src/component/page/CarManager";
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import GetPrice from './src/component/page/GetPrice';
 import BrandMaxPrice from './src/component/page/BrandMaxPrice';
 import ModelMaxPrice from './src/component/page/ModelMaxPrice';
 import GetRoadPrice from './src/component/page/GetRoadPrice';
+import HistoryUpdate from './src/component/page/HistoryUpdate';
+import HistoryDelete from './src/component/page/HistoryDelete';
 
 const renderAdminRouter = () => {
   const adminrouter = [
@@ -27,6 +29,15 @@ const renderAdminRouter = () => {
     {
       path: "/Road-Price",
       component: <GetRoadPrice />,
+    },
+    {
+      path: "/History-Update",
+      component: <HistoryUpdate />,
+    },
+
+    {
+      path: "/History-Delete",
+      component: <HistoryDelete />,
     }
 
 
